@@ -5,7 +5,7 @@
   }
   body {
     box-sizing: border-box;
-    background-color: hsl(0, 80%, 74%);
+    background-color: hsl(0, 100%, 74%);
   }
   .head-section {
     color: white;
@@ -131,7 +131,9 @@
       background-image: url("images/bg-intro-desktop.png");
     }
     .heading {
-      width: 300px;
+      width: 450px;
+      font-size: 50px;
+      padding-bottom: 30px;
     }
     .desc {
       width: 500px;
@@ -140,7 +142,7 @@
       grid-column: 1/2;
       grid-row: 1/2;
       align-self: center;
-      padding: 80px;
+      padding: 120px;
       margin-left: 40px;
     }
     p.trial {
@@ -148,7 +150,8 @@
       display: block;
       align-self: center;
       justify-self: start;
-    }
+      padding: 22px;
+    } 
     form {
       grid-column: 2/3;
       grid-row: 2/3;
