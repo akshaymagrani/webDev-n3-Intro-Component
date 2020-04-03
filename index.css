@@ -22,11 +22,6 @@
   .bold {
     font-weight: bold;
   }
-  div.form1 {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
   form {
     display: block;
     background-color: white;
@@ -34,6 +29,15 @@
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0px 8px grey;
+    position:relative;
+  }
+  .div-input1{
+    display:block;
+    position:relative;
+  }
+  .div-input{
+    display:block;
+    position:relative;
   }
   .field {
     display: block;
@@ -43,6 +47,27 @@
     border-radius: 5px;
     border: 1px solid hsl(246, 25%, 77%);
   }
+  #error-msg1, #error-msg2, #error-msg3, #error-msg4 {
+    display:none;
+    float:right;
+    color: hsl(0, 100%, 74%);
+    top:-22px;
+    position:relative;
+    font-style: italic;
+    font-size: 16px;
+    }
+  #error-icon1 {
+    display:none;
+      position:absolute;
+      right:30px;
+      top:16px;
+  }
+  #error-icon2, #error-icon3, #error-icon4 {
+    display:none;
+    position:absolute;
+    right:30px;
+    top:41px;
+}
   #submit {
     background-color: hsl(154, 59%, 51%);
     color: white;
@@ -164,6 +189,3 @@
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
-  
-
-
