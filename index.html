@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link href="index.css" rel="stylesheet" type="text/css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -28,17 +28,29 @@
       <!--Form Element-->
       <div class="form1">
         <form>
-          <div class="form1">
+          <div class="div-input1">
             <label for="fname"></label>
-            <input type="text" placeholder="First Name" id="fname" class="field" /><br></div>
+            <input type="text" placeholder="First Name" id="field1" class="field" />
+            <img src="images/icon-error.svg" alt="error-icon" id="error-icon1"></img><br></div>
+            <p id="error-msg1">First Name cannot be empty.</p>
+          <div class="div-input">
             <label for="lname"></label>
-            <input type="text" placeholder="Last Name" id="lname" class="field" /><br>
+            <input type="text" placeholder="Last Name" id="field2" class="field" />
+            <img src="images/icon-error.svg" alt="error-icon" id="error-icon2"></img><br>
+            <p id="error-msg2">Last Name cannot be empty.</p></div>
+          <div class="div-input">
             <label for="email"></label>
-            <input type="email" placeholder="Email Address" id="email" class="field" /><br>
+            <input type="email" placeholder="Email Address" id="email" class="field"/>
+            <img src="images/icon-error.svg" alt="error-icon" id="error-icon3" value=""></img><br>
+            <p id="error-msg3">Looks like this is not an email.</p></div>
+          <div class="div-input">
             <label for="password"></label>
-            <input type="password" placeholder="Password" id="password" class="field" /><br>
-
-            <input type="submit" value="Claim your free trial" id="submit" class="field" />
+            <input type="password" placeholder="Password" id="field3" class="field" />
+            <img src="images/icon-error.svg" alt="error-icon" id="error-icon4"></img><br>
+            <p id="error-msg4">Password cannot be empty.</p></div>
+         
+            <label for="submit"></label>
+            <input type="submit" value="Claim your free trial" id="submit" class="field" onclick="validate()"/>
 
           <p class="terms">By clicking the button, you are agreeing to our <span class="term-red">Terms and Services</span></p>
         </form>
@@ -51,5 +63,30 @@
         Coded by <a href="#">Akshaykumar Magrani.</a>.
       </p>
     </footer>
+    <script>
+      //to match the design only - function does not validate the data input yet - will get that done later.
+     function validate() {
+        var emaili = document.getElementById("email");
+        for (i=1; i < 5; i++) {
+          var error = document.getElementById("error-msg"+i);
+          error.style.display = "block"
+          var error_icon = document.getElementById("error-icon"+i);
+          error_icon.style.display = "block";
+        }
+        for (i=1; i < 4; i++) {
+          var fields = document.getElementById("field"+i);
+          console.log(fields);
+            if(fields.value == "") {
+              fields.setAttribute("placeholder","");
+              fields.style.border = "2px solid red";
+            }
+          }
+          if(fields.value == "") {
+            email.value = "email@example/com";
+            emaili.style.color = "red";
+            emaili.style.border = "2px solid red";
+          }
+      };
+    </script>
 </body>
 </html>
