@@ -29,28 +29,27 @@
       <div class="form1">
         <form>
           <div class="div-input1">
-            <label for="fname"></label>
-            <input type="text" placeholder="First Name" id="field1" class="field" />
+            
+            <input type="text" placeholder="First Name" id="field1" class="field" aria-label="true" />
             <img src="images/icon-error.svg" alt="error-icon" id="error-icon1"></img><br></div>
             <p id="error-msg1">First Name cannot be empty.</p>
           <div class="div-input">
-            <label for="lname"></label>
-            <input type="text" placeholder="Last Name" id="field2" class="field" />
+            
+            <input type="text" placeholder="Last Name" id="field2" class="field" aria-label="true"/>
             <img src="images/icon-error.svg" alt="error-icon" id="error-icon2"></img><br>
             <p id="error-msg2">Last Name cannot be empty.</p></div>
           <div class="div-input">
-            <label for="email"></label>
-            <input type="email" placeholder="Email Address" id="email" class="field"/>
-            <img src="images/icon-error.svg" alt="error-icon" id="error-icon3" value=""></img><br>
+            
+            <input type="email" placeholder="Email Address" id="email" class="field" aria-label="true"/>
+            <img src="images/icon-error.svg" alt="error-icon" id="error-icon3"></img><br>
             <p id="error-msg3">Looks like this is not an email.</p></div>
           <div class="div-input">
-            <label for="password"></label>
-            <input type="password" placeholder="Password" id="field3" class="field" />
+           
+            <input type="password" placeholder="Password" id="field3" class="field" aria-label="true"/>
             <img src="images/icon-error.svg" alt="error-icon" id="error-icon4"></img><br>
             <p id="error-msg4">Password cannot be empty.</p></div>
          
-            <label for="submit"></label>
-            <input type="submit" value="Claim your free trial" id="submit" class="field" onclick="validate()"/>
+            <input type="submit" value="Claim your free trial" id="submit" class="field" onclick="validate()" aria-label="true"/>
 
           <p class="terms">By clicking the button, you are agreeing to our <span class="term-red">Terms and Services</span></p>
         </form>
