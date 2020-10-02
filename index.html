@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link href="index.css" rel="stylesheet" type="text/css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
-    <div class="head-section">
-      <!--Heading-->
-      <h1 class="heading">Learn to code by watching others</h1>
-      <!--Description-->
-      <p class="desc">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-        but understanding how developers think is invaluable. </p>
-    </div>
-    <!--Free Trial Detail-->
-    <div class="grid-right">
-      <p class="trial"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
-      <!--Form Element-->
-      <div class="form1">
-        <form>
-          <div class="div-input1">
-            
-            <input type="text" placeholder="First Name" id="field1" class="field" name="fname" aria-label="true" />
-            <img src="images/icon-error.svg" alt="error-icon" id="error-icon1"></img><br></div>
-            <p id="error-msg1">First Name cannot be empty.</p>
-          <div class="div-input">
-            
-            <input type="text" placeholder="Last Name" id="field2" class="field" name="lname" aria-label="true"/>
-            <img src="images/icon-error.svg" alt="error-icon" id="error-icon2"></img><br>
-            <p id="error-msg2">Last Name cannot be empty.</p></div>
-          <div class="div-input">
-            
-            <input type="email" placeholder="Email Address" id="email" class="field" name="email" aria-label="true"/>
-            <img src="images/icon-error.svg" alt="error-icon" id="error-icon3"></img><br>
-            <p id="error-msg3">Looks like this is not an email.</p></div>
-          <div class="div-input">
-           
-            <input type="password" placeholder="Password" id="field3" class="field" name="password" aria-label="true"/>
-            <img src="images/icon-error.svg" alt="error-icon" id="error-icon4"></img><br>
-            <p id="error-msg4">Password cannot be empty.</p></div>
-         
-            <input type="submit" value="Claim your free trial" id="submit" class="field" name="submit" onclick="validate()" aria-label="true"/>
 
-          <p class="terms">By clicking the button, you are agreeing to our <span class="term-red">Terms and Services</span></p>
-        </form>
-      </div>
+<body>
+  <div class="head-section">
+    <!--Heading-->
+    <h1 class="heading">Learn to code by watching others</h1>
+    <!--Description-->
+    <p class="desc">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+      but understanding how developers think is invaluable. </p>
+  </div>
+  <!--Free Trial Detail-->
+  <div class="grid-right">
+    <p class="trial"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
+    <!--Form Element-->
+    <div class="form1">
+      <form>
+        <div class="div-input1">
+
+          <input type="text" placeholder="First Name" id="field1" class="field" name="fname" aria-label="true" />
+          <img src="images/icon-error.svg" alt="error-icon" id="error-icon1"></img><br></div>
+        <p id="error-msg1">First Name cannot be empty.</p>
+        <div class="div-input">
+
+          <input type="text" placeholder="Last Name" id="field2" class="field" name="lname" aria-label="true" />
+          <img src="images/icon-error.svg" alt="error-icon" id="error-icon2"></img><br>
+          <p id="error-msg2">Last Name cannot be empty.</p>
+        </div>
+        <div class="div-input">
+
+          <input type="email" placeholder="Email Address" id="email" class="field" name="email" aria-label="true" />
+          <img src="images/icon-error.svg" alt="error-icon" id="error-icon3"></img><br>
+          <p id="error-msg3">Looks like this is not an email.</p>
+        </div>
+        <div class="div-input">
+
+          <input type="password" placeholder="Password" id="field3" class="field" name="password" aria-label="true" />
+          <img src="images/icon-error.svg" alt="error-icon" id="error-icon4"></img><br>
+          <p id="error-msg4">Password cannot be empty.</p>
+        </div>
+
+        <input type="submit" value="Claim your free trial" id="submit" class="field" name="submit" onclick="validate()"
+          aria-label="true" />
+
+        <p class="terms">By clicking the button, you are agreeing to our <span class="term-red">Terms and
+            Services</span></p>
+      </form>
     </div>
-    <!--Footer-->
-    <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Akshaykumar Magrani.</a>.
-      </p>
-    </footer>
-    <script>
-      //to match the design only - function does not validate the data input yet - will get that done later.
-     function validate() {
-        var emaili = document.getElementById("email");
-        for (i=1; i < 5; i++) {
-          var error = document.getElementById("error-msg"+i);
-          error.style.display = "block"
-          var error_icon = document.getElementById("error-icon"+i);
-          error_icon.style.display = "block";
+  </div>
+  <!--Footer-->
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+        Mentor</a>.
+      Coded by <a href="#">Akshaykumar Magrani.</a>.
+    </p>
+  </footer>
+  <script>
+    //to match the design only - function does not validate the data input yet - will get that done later.
+    function validate() {
+      var emaili = document.getElementById("email");
+      for (i = 1; i < 5; i++) {
+        var error = document.getElementById("error-msg" + i);
+        error.style.display = "block"
+        var error_icon = document.getElementById("error-icon" + i);
+        error_icon.style.display = "block";
+      }
+      for (i = 1; i < 4; i++) {
+        var fields = document.getElementById("field" + i);
+        console.log(fields);
+        if (fields.value == "") {
+          fields.setAttribute("placeholder", "");
+          fields.style.border = "2px solid red";
         }
-        for (i=1; i < 4; i++) {
-          var fields = document.getElementById("field"+i);
-          console.log(fields);
-            if(fields.value == "") {
-              fields.setAttribute("placeholder","");
-              fields.style.border = "2px solid red";
-            }
-          }
-          if(fields.value == "") {
-            email.value = "email@example/com";
-            emaili.style.color = "red";
-            emaili.style.border = "2px solid red";
-          }
-      };
-    </script>
+      }
+      if (fields.value == "") {
+        email.value = "email@example/com";
+        emaili.style.color = "red";
+        emaili.style.border = "2px solid red";
+      }
+    };
+  </script>
 </body>
+
 </html>
