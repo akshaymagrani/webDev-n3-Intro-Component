@@ -1,3 +1,15 @@
+:root{
+  /*====Primary====*/
+--Red: hsl(0, 100%, 74%);
+--Green: hsl(154, 59%, 51%);
+
+  /*====Accent====*/
+--Blue: hsl(248, 32%, 49%);
+  
+/*====Neutral==== */
+--darkBlue: hsl(249, 10%, 26%);
+--grayishBlue: hsl(246, 25%, 77%);
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +17,15 @@
   }
   body {
     box-sizing: border-box;
-    background-color: hsl(0, 100%, 74%);
+    background-color: var(--Red);
+    height: 100vh;
   }
   .head-section {
     color: white;
   }
   .trial {
     color: white;
-    background-color: hsl(248, 32%, 49%);
+    background-color: var(--Blue);
     padding: 10px 50px;
     margin: 28px 20px;
     text-align: center;

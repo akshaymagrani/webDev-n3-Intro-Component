@@ -11,17 +11,12 @@
     rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link href="index.css" rel="stylesheet" type="text/css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <!-- Adding CDN's to incorporate react into the project -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+  <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
 </head>
 
 <body>
@@ -37,12 +32,11 @@
     <p class="trial"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
     <!--Form Element-->
     <div class="form1">
-      <form>
         <div class="div-input1">
-
           <input type="text" placeholder="First Name" id="field1" class="field" name="fname" aria-label="true" />
-          <img src="images/icon-error.svg" alt="error-icon" id="error-icon1"></img><br></div>
-        <p id="error-msg1">First Name cannot be empty.</p>
+          <img src="images/icon-error.svg" alt="error-icon" id="error-icon1"></img><br>
+        </div>
+          <p id="error-msg1">First Name cannot be empty.</p>
         <div class="div-input">
 
           <input type="text" placeholder="Last Name" id="field2" class="field" name="lname" aria-label="true" />
@@ -70,6 +64,9 @@
       </form>
     </div>
   </div>
+<div class="reactCom">
+
+</div>
   <!--Footer-->
   <footer>
     <p class="attribution">
@@ -78,7 +75,9 @@
       Coded by <a href="#">Akshaykumar Magrani.</a>.
     </p>
   </footer>
-  <script>
+
+  <!-- JS React Script -->
+  <script type="text/babel">
     //to match the design only - function does not validate the data input yet - will get that done later.
     function validate() {
       var emaili = document.getElementById("email");
@@ -103,6 +102,8 @@
       }
     };
   </script>
+
+  <script src="./indexElement.js"></script>
 </body>
 
 </html>
